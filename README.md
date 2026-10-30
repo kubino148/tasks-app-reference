@@ -40,6 +40,12 @@ pip install -r requirements.txt
 NORMALIZER_URL=http://localhost:5001 flask --app app:create_app run --port 5000
 ```
 
+Firewall commands
+```bash
+sudo iptables-legacy -P FORWARD ACCEPT
+sudo iptables-legacy -S FORWARD | head -1
+```
+
 Try it:
 
 ```bash
