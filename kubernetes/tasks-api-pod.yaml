@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tasks-api
+spec:
+  containers:
+  - name: api
+    image: tasks-api:local
+    ports:
+    - containerPort: 5000

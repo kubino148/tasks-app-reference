@@ -251,4 +251,15 @@ bash /tmp/install-kind.sh
 
 Read the script before you run it.
 
+If you missed this meeting: run the three lines above, then copy these as whole files: `kubernetes/kind-config.yaml` and `kubernetes/tasks-api-pod.yaml` (no file you already have changes). Build `tasks-api:local` as in Meeting 4, then put it into the cluster node with `docker image save --platform linux/amd64 --output /tmp/tasks-api.tar tasks-api:local` and `kind load image-archive /tmp/tasks-api.tar`. The cluster is gone with the Codespace. None of this is homework.
+
 Docs: [kind quick start](https://kind.sigs.k8s.io/docs/user/quick-start/), [Kubernetes: Pods](https://kubernetes.io/docs/concepts/workloads/pods/), [kubectl port-forward](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_port-forward/), [Forwarding ports in your codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace), [GitHub: Codespaces billing](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces)
+
+Tasks:
+
+1. Run the install script and create a cluster from `kubernetes/kind-config.yaml`.
+2. Start a Pod from a file and read it with `get`, `describe` and `logs`.
+3. Put your `tasks-api` image into the node and describe it in `kubernetes/tasks-api-pod.yaml`.
+4. Open the Pod in a browser tab through `kubectl port-forward`.
+5. Delete the cluster and make it again from the file.
+6. Push the two files on a branch.
