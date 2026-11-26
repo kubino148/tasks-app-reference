@@ -236,3 +236,19 @@ Tasks:
 4. Push a branch, open a pull request and merge it.
 5. Fix a change made by hand.
 6. Predict which edit replaces a container.
+
+### Meeting 11: Kubernetes, the environment
+
+A Kubernetes cluster runs your containers on one or more machines and is told what to run by files. kind runs a Kubernetes cluster inside Docker; ours has one node, so every Codespace can have its own. A Pod is the smallest thing Kubernetes runs; `kubectl` reads and changes the cluster.
+
+#### Install kind
+
+```bash
+curl -fsSL -o /tmp/install-kind.sh https://raw.githubusercontent.com/kubino148/tasks-app-reference/main/scripts/install-kind.sh
+cat /tmp/install-kind.sh
+bash /tmp/install-kind.sh
+```
+
+Read the script before you run it.
+
+Docs: [kind quick start](https://kind.sigs.k8s.io/docs/user/quick-start/), [Kubernetes: Pods](https://kubernetes.io/docs/concepts/workloads/pods/), [kubectl port-forward](https://kubernetes.io/docs/reference/kubectl/generated/kubectl_port-forward/), [Forwarding ports in your codespace](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace), [GitHub: Codespaces billing](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces)
